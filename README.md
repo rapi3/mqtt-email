@@ -53,7 +53,7 @@ Don't forget to: postalias /etc/aliases and afterwards reload Postfix with postf
 you need to create binary sensor motion for every camera<br>
 There is no need to send message when Alarm is off because the sensor created will auto change state to off after 60s
 ```
-# CCTV EZIP04 Alarm
+# CCTV EZIP08 Alarm
 - platform: mqtt
   state_topic: "IOT/cctv/ez08"
   name: "CCTV-EZ08"
@@ -62,3 +62,4 @@ There is no need to send message when Alarm is off because the sensor created wi
   unique_id: 333-00000000844444444444
   device_class: motion
   ```
+![Home Assistant motion sensors ](https://github.com/rapi3/mqtt-email/blob/main/Screenshot_2021-12-22_20-19-55.png)
