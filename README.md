@@ -26,7 +26,8 @@ Alarm Event: Motion Detection Start
 Alarm Input Channel: 1
 Alarm Start Time(D/M/Y H:M:S): 21/12/2021 22:15:33
 Alarm Device Name: EZIP08
-Alarm Name: IP Address: 192.168.2.155
+Alarm Name: 
+IP Address: 192.168.2.155
 ```
 we need to search for first line: "Alarm Event: Motion Detection Start"<br>
 encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
