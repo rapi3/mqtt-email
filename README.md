@@ -31,7 +31,7 @@ Alarm Name: IP Address: 192.168.2.155
 we need to search for first line: "Alarm Event: Motion Detection Start"<br>
 encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
 
-EZIP camera when detect motion send email message in this format:
+IPC camera when detect motion send email message in this format:
 ```
 Alarm Event: Motion Detection
 Alarm Input Channel: 1
