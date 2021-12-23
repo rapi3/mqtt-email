@@ -31,8 +31,20 @@ Alarm Name: IP Address: 192.168.2.155
 we need to search for first line: "Alarm Event: Motion Detection Start"<br>
 encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
 
+EZIP camera when detect motion send email message in this format:
+```
+Alarm Event: Motion Detection
+Alarm Input Channel: 1
+Alarm Start Time(D/M/Y H:M:S): 23/12/2021 10:27:46
+Alarm Device Name: IPC06
+Alarm Name: 
+IP Address: 192.168.2.164
+```
+we need to search for first line and part of seccond line.<br>
+encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24NCkFsYXJtIElucHV0IENoYW5uZWw"
+
 when string it is found script will publish message <b>Alarm</b> in camera named topic: <b>IOT/cctv/ez08</b><br>
-sender-name it is taken form email:
+sender-name it is taken from cctv email:
 ```
 Return-Path: <ez08@myhome.local
 ```
