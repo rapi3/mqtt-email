@@ -22,7 +22,7 @@ def parse():
 
     if ezip_string in message or ipc_string in message:
         find_sender(message)
-        publish.single('IOT/cctv/{}'.format(sender), "Alarm", hostname="192.168.1.133", client_id="cctv-email", auth = {'username':"mqtt-email", 'password':"your_pass"})
+        publish.single('IOT/cctv/{}'.format(sender), "Alarm", hostname="192.168.1.133", client_id="mqtt-email", auth = {'username':"your_user", 'password':"your_pass"})
 
 if __name__ == '__main__':
     parse()
