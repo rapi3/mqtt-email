@@ -9,6 +9,7 @@ import paho.mqtt.publish as publish
 
 ezip_string = "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
 ipc_string = "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24NCkFsYXJtIElucHV0IENoYW5uZWw"
+gs_string = "RVZFTlQgVFlQRTogTW90aW9uIERldGVjdGVk"
 
 sender = "name"
 
@@ -20,7 +21,7 @@ def find_sender(message):
 def parse():
     message = sys.stdin.read()
 
-    if ezip_string in message or ipc_string in message:
+    if ezip_string in message or ipc_string in message or gs_string in message:
         find_sender(message)
         publish.single('IOT/cctv/{}'.format(sender), "Alarm", hostname="192.168.1.133", client_id="mqtt-email", auth = {'username':"your_user", 'password':"your_pass"})
 
