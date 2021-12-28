@@ -20,7 +20,7 @@ https://online-free-tools.com/en/base_64_encoder_decoder
 
 ----
 
-Dahua EZIP camera when detect motion send email message (encoded) in this format:
+<b>Dahua EZIP</b> camera when detect motion send email message (encoded) in this format:
 ```
 Alarm Event: Motion Detection Start
 Alarm Input Channel: 1
@@ -32,7 +32,7 @@ IP Address: 192.168.2.155
 we need to search for first line: "Alarm Event: Motion Detection Start"<br>
 encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
 
-Dahua IPC camera when detect motion send email message (encoded) in this format:
+<b>Dahua IPC</b> camera when detect motion send email message (encoded) in this format:
 ```
 Alarm Event: Motion Detection
 Alarm Input Channel: 1
@@ -44,7 +44,7 @@ IP Address: 192.168.2.164
 we need to search for first line and part of seccond line.<br>
 encoded will be: "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24NCkFsYXJtIElucHV0IENoYW5uZWw"
 
-No Name camera when detect motion send email message (not encoded) in this format:
+<b>No Name</b> camera when detect motion send email message (not encoded) in this format:
 ```
 	This is an automatically generated e-mail from your IPC.
 
@@ -56,10 +56,10 @@ No Name camera when detect motion send email message (not encoded) in this forma
 ```
 we need to search for first line: "EVENT TYPE: Motion Detected"<br>
 
-when string it is found script will publish message <b>Alarm</b> in camera named topic: <b>IOT/cctv/ez08</b><br>
+when string it is found script will publish message <b>Alarm</b> in camera named topic: <b>IOT/cctv/XXXX</b><br>
 sender-name it is taken from cctv email:
 ```
-Return-Path: <ez08@myhome.local
+Return-Path: <XXXX@myhome.local
 ```
 so you can have any nr of cameras sending messages to that email box and each camera will have his own topic.
 
