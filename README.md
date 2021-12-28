@@ -64,7 +64,8 @@ Return-Path: <XXXX@myhome.local
 ```
 so you can have any nr of cameras sending messages to that email box and each camera will have his own topic.
 
-# You need to add in code your MQTT server IP, user & password
+<b>You need to add in python code your MQTT server-ip, user & password.</b><br>
+
 # Postfix
 
 this is required for script to be executed when mailbox usercctv will receive mail:<br>
