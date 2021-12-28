@@ -76,7 +76,7 @@ usercctv: |/etc/postfix/script/mqtt-email.py<br>
 Don't forget to: postalias /etc/aliases and afterwards reload Postfix with postfix reload<br>
 
 <b>Advice</b><br>
-<i>Use one mailbox/postfix user for all cctv camera that send email alerts because any message sent to that mailbox will be processed by this script and will not be stored/saved on Postfix.
+<i>Use one mailbox/postfix user for all cctv camera that send email alerts because any message sent to that mailbox will be processed by this script and will not be stored/saved on Postfix.<br>
 Add another user in camera SMTP setting to send cc mesages for trouble events and set filters to discard motion alarm mesages processed by script.</i>
 
 ----
