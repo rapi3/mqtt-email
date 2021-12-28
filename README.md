@@ -2,13 +2,13 @@
 Python script that read email send by Dahua EZIP cctv camera and send MQTT alarm.
 ```
 q: why ?
-a: Because for Dahua EZIP camera don't exist until now an integration for IOT and you can't integrate in HA (untill now)
+a: Because for Dahua EZIP camera don't exist until now an integration for IOT and you can't integrate in HA (untill now).
 
 q: what it does ?
 a: parse emails sent by cctv camera, search for alarm string and if found it publish MQTT message in camera topic.
 
 q: can work for any camera ?
-a: yes with minimum modification on string to find it will work for any camera that can send email when it detect motion
+a: yes, you need to add string to find and it will work for any camera that can send email when it detect motion.
 
 q: what do I need to run ?
 a: You need to have your Postfix email server and MQTT server running and optional Home Assistant.
