@@ -14,7 +14,8 @@ q: what do I need to run ?
 a: You need to have your Postfix email server and MQTT server running and optional Home Assistant.
 ```
 ----
-To decode email sent by camera if encoded MIM Base 64 use:
+Some camera will send mesages encoded in MIME 64 format.<br>
+To decode email sent by camera if it is encoded MIME Base 64 use:
 
 https://online-free-tools.com/en/base_64_encoder_decoder
 
