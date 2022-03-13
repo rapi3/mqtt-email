@@ -1,5 +1,6 @@
 # mqtt-email.py
-Python script that pasrse emails send by Dahua EZIP & IPC CCTV camera and send MQTT alarm.
+Python script that pasrse emails send by Dahua EZIP & IPC CCTV camera and send MQTT alarm.<br>
+Another variant of script that it will run as a local email server it is available here: https://github.com/rapi3/mqtt-email-srv<br>
 ```
 q: why ?
 a: Because for Dahua EZIP camera don't exist until now an integration for IOT and you can't integrate in HA (untill now).
