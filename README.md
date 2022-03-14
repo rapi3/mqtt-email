@@ -97,3 +97,5 @@ There is no need to send message when Alarm is off because the sensor created wi
   device_class: motion
   ```
 ![Home Assistant motion sensors ](https://github.com/rapi3/mqtt-email/blob/main/Screenshot_2021-12-22_20-19-55.png)
+
+<sub>Tags: CCTV, Dahua, MQTT, email, IOT, Tasmota</sub>
