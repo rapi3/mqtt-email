@@ -66,6 +66,7 @@ Return-Path: <XXXX@myhome.local
 so you can have any nr of cameras sending messages to that email box and each camera will have his own topic.
 
 <b>You need to add in python code your MQTT server-ip, user & password.</b><br>
+Modify the script as appropriate.<br>
 
 # Postfix
 
@@ -79,6 +80,7 @@ Don't forget to: postalias /etc/aliases and afterwards reload Postfix with postf
 <b>Advice</b><br>
 <i>Use one mailbox/postfix user for all cctv camera that send email alerts because any message sent to that mailbox will be processed by this script and will not be stored/saved on Postfix.<br>
 Add another user in camera SMTP setting to send cc mesages for trouble events and set filters to discard motion alarm mesages processed by script.</i><br>
+
 If you need to install and configure Postfix on rpi you can use this excelent tutorial from Sam Hobbs<br>
 https://samhobbs.co.uk/2014/03/raspberry-pi-email-server
 
