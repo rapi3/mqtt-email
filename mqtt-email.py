@@ -7,23 +7,28 @@ import sys
 import re
 import paho.mqtt.publish as publish
 
+# define here string to search for camera Alarm
 ezip_string = "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24gU3RhcnQ"
 ipc_string = "QWxhcm0gRXZlbnQ6IE1vdGlvbiBEZXRlY3Rpb24NCkFsYXJtIElucHV0IENoYW5uZWw"
 gs_string = "EVENT TYPE: Motion Detected"
-
 sender = "name"
 
+# find sender name from cctv email name:
 def find_sender(message):
     global sender
     sender = re.search(r"(?<=Return-Path: <).+?(?=\@)", message)
     sender = sender.group()
 
+# search in email body for camera Alarm string defined up:    
 def parse():
     message = sys.stdin.read()
 
     if ezip_string in message or ipc_string in message or gs_string in message:
         find_sender(message)
         publish.single('IOT/cctv/{}'.format(sender), "Alarm", hostname="your.mqtt.server.ip", client_id="mqtt-email", auth = {'username':"your_mqtt_user", 'password':"your_mqtt_pass"})
+# For debug:
+#        print('.....Debug sender: ', sender)
+#        print('.....Debug EXECUTE MQTT !')
 
 if __name__ == '__main__':
     parse()
