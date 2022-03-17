@@ -79,7 +79,7 @@ Don't forget to run: postalias /etc/aliases and afterwards reload Postfix with p
 
 <b>Advice</b><br>
 <i>Use one mailbox/postfix user for all cctv camera that send email alerts, because alarm start & alarm end messages sent to this mailbox will be processed by this script and will not be stored/saved on Postfix.<br>
-All other messages will be saved ( change the code as you want to save all - alarm start/stop ) in /tmp/ and can be moved to another mailbox with a simple bash script that run from crontab.</i><br>
+All other messages will be saved ( change the code as you want to save all + alarm start/stop ) in /tmp/ and can be moved to another mailbox with a simple bash script that run from crontab.</i><br>
 
 If you need to install and configure Postfix on rpi you can use this excelent tutorial from Sam Hobbs<br>
 https://samhobbs.co.uk/2014/03/raspberry-pi-email-server
