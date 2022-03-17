@@ -6,7 +6,7 @@ q: why ?
 a: Because for Dahua EZIP camera don't exist until now an integration for IOT and you can't integrate in HA (untill now).
 
 q: what it does ?
-a: parse emails sent by cctv camera, search for alarm string and if found it publish MQTT message in camera topic.
+a: parse emails sent by cctv camera, search for strings defined and if found it publish MQTT message in camera topic.
 
 q: can work for any camera ?
 a: yes, you need to add string to find and it will work for any camera that can send email when it detect motion.
@@ -75,11 +75,11 @@ this is required for python code to be executed when mailbox usercctv will recei
 add in /etc/aliases<br>
 usercctv: |/etc/postfix/script/mqtt-email.py<br>
 
-Don't forget to: postalias /etc/aliases and afterwards reload Postfix with postfix reload<br>
+Don't forget to run: postalias /etc/aliases and afterwards reload Postfix with postfix reload<br>
 
 <b>Advice</b><br>
-<i>Use one mailbox/postfix user for all cctv camera that send email alerts because any message sent to that mailbox will be processed by this script and will not be stored/saved on Postfix.<br>
-Add another user in camera SMTP setting to send cc mesages for trouble events and set filters to discard motion alarm mesages processed by script.</i><br>
+<i>Use one mailbox/postfix user for all cctv camera that send email alerts, because alarm start & alarm end messages sent to this mailbox will be processed by this script and will not be stored/saved on Postfix.<br>
+All other messages will be saved ( change the code as you want to save all - alarm start/stop ) in /tmp/ and can be moved to another mailbox with a simple bash script that run from crontab.</i><br>
 
 If you need to install and configure Postfix on rpi you can use this excelent tutorial from Sam Hobbs<br>
 https://samhobbs.co.uk/2014/03/raspberry-pi-email-server
