@@ -42,7 +42,7 @@ def parse():
 #        print ('Debug: Alarm start discard email')
 
     elif ezip_end in message or ipc_end in message:
-        alarm = "end"
+        pass
 #        print ('Debug: Alarm end discard email')
 
     else:
