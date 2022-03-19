@@ -1,5 +1,5 @@
 # mqtt-email.py
-Python code that pasrse emails sent by Dahua CCTV EZIP & IPC camera and send MQTT alarm.<br>
+Python code that translate email sent by Dahua CCTV EZIP & IPC camera in MQTT message.<br>
 Another variant of code that it will run as a local email server it is available here: https://github.com/rapi3/mqtt-email-srv<br>
 ```
 q: why ?
